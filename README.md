@@ -8,6 +8,36 @@ Classifying the user review to one of the rating class. User will enter the revi
 - Image Captioning : This phase is not related to the project but this option will let user to generate the captions for the uploaded images.
 - I will use two different datasets. one for search and classifier and another for captioning.
 
+# Background Implementation
+- Search
+For implementing search i've used Tf-IDF method to search for the documents related to the search query entered by the user from website.
+I am using flask framework to connect the serverside python code to the frontend part
+
+Calculating the TF-IDF for every term in the query might be slow, so, to reduce the computation time I used precomputation method:
+- In precomputation I'll precompute the term-frequency of every term in every document in the dataset and keep it as a 2D matrix. 
+- I'll precompute all the values of the variable needed to find tf-idf of every term
+
+Cosine Similarity
+- After finding all the tf-idf values of search query for every document, i'll find the cosine similarity between the query and the documents.
+For this i'll find the dot product of search query vector and every document and save it in a list.
+Then i'll show the top 10 results having high cosine similarity values.
+
+Right now my search is little bit slow and i am working to optimize the computation of cosine similarity.
+
+# Demo
+- live version of webapp http://ankitrathore.pythonanywhere.com/
+
+# Reference
+- https://janav.wordpress.com/2013/10/27/tf-idf-and-cosine-similarity/
+- https://github.com/BhaskarTrivedi/QuerySearch_Recommentation_Classification
+- https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-recommendation-engine-python/
+
+# Dataset
+- https://www.kaggle.com/ak47bluestack/amazonphonedataset
+
+# point to note
+- install all the dependencies of nltk before deploying on server
+
 # Technology
 - Python
 - Flask
