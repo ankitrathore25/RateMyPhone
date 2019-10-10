@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for, request
+from preprocessData import callSearch
 
 app = Flask(__name__)
 
@@ -6,10 +7,11 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/', methods=['POST'])
+@app.route('/search', methods=['POST'])
 def getSearchQuery():
     q = request.form['query']
-    return render_template('test.html',q=q)
+    resultSet = callSearch(q)
+    return render_template('test.html',q=resultSet)
 
 if __name__=="__main__":
     app.run(debug=True)

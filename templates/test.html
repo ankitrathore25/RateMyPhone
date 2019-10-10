@@ -6,6 +6,9 @@
 
 {% block body%}
 {% include '/header.html' %}
-<h1 style="text-align: center">You searched for: {{ q }} </h1>
+
+{% for phonedata in q %}
+<p style="text-align: center">You searched for: {{ phonedata }} </p>
+{% endfor %}
 
 {% endblock%}
