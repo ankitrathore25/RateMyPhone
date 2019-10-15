@@ -5,10 +5,39 @@
 {% endblock %}
 
 {% block body%}
-{% include '/header.html' %}
 
-{% for phonedata in q %}
-<p style="text-align: center">You searched for: {{ phonedata }} </p>
+{% include '/index.html' %}
+<h4 style="text-align: center;color:green;">Searched Query : {{ q }}</h4>
+
+{% for phonedata in result %}
+<div class="container" style="background:#f0f0f0;padding: 5px;">
+<p style="font-size: 18px;"><b>Title: </b> {{ phonedata.title }}</h4>
+<p style="font-size: 15px;"><b>Features: </b> {{ phonedata.features }}</h4>
+<p style="font-size: 15px;"><b>Description: </b>{{ phonedata.desc }}</h4>
+<p style="font-size: 15px;"><b>Total TF-IDF value: </b>{{ phonedata.tfIdfValuesMap.totalTfIdfValue }}</h4>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Term</th>
+        <th scope="col">Term Frequency</th>
+        <th scope="col">Inverse Docuement Frequency</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for key in phonedata.tfIdfValuesMap.tf.keys() %}
+        <tr>
+            <th scope="row">{{ key }}</th>
+            <td>{{ phonedata.tfIdfValuesMap.tf[key] }}</td>
+            <td>{{ phonedata.tfIdfValuesMap.idf[key] }}</td>
+        </tr>
+        {% endfor %}
+      
+    </tbody>
+  </table>
+
+</div>
+<br>
 {% endfor %}
+
 
 {% endblock%}
