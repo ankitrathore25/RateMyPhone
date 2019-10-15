@@ -43,6 +43,11 @@ I am working on synonyms and phrase support. For synonmys I will use nltk wordne
 # Demo
 - live version of webapp http://dm3.pythonanywhere.com/, https://ratemyphone-api-heroku.herokuapp.com/
 
+
+# Challenges
+- First challenge is setting global variables on webserver(pythonanywhere or heroku). On these web hosting servers we do not run app using app.run() and flask is not thread safe so it creates different set of global variables and these global variables are inaccessible in the other functions. I will be tackling this problem with changing the structure of my code and use class objects.
+- Second challenge I faced is calculating cosine similarity of the query and documents. It takes huge time in calculating dot product of query vector with every document. I will be handling this problem with calculating dot product with top K documents with the query. These top K will be selected on the basis of idf value for the query terms.
+
 # Reference
 - https://janav.wordpress.com/2013/10/27/tf-idf-and-cosine-similarity/
 - https://github.com/BhaskarTrivedi/QuerySearch_Recommentation_Classification
