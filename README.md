@@ -7,6 +7,7 @@ Classifying the user review to one of the rating class. User will enter the revi
 - Classifier : In this phase user's review will be classified as one of the rating class. Here user give the review of the phone as the free form text and classifier will be able to classify the rating based on the review.
 - Image Captioning : This phase is not related to the project but this option will let user to generate the captions for the uploaded images.
 - I will use two different datasets. one for search and classifier and another for captioning.
+![](https://github.com/ankitrathore25/RateMyPhone/blob/master/img/AppHomePage.png)
 
 # Background Implementation
 - Search
