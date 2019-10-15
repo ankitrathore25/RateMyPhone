@@ -37,6 +37,9 @@ Right now my search is little bit slow and i am working to optimize the computat
 Highlighting the search query
 -I have done highlighting with simple css property. I added <span style="background:yellow;"></span> around the every term from search query to the the showed text documents. I have used Markup/markupsafe depedency to send HTML code to the flask.
 
+Synonyms and Phrase support:
+I am working on synonyms and phrase support. For synonmys I will use nltk wordnet corpus.
+
 # Demo
 - live version of webapp http://dm3.pythonanywhere.com/, https://ratemyphone-api-heroku.herokuapp.com/
 
