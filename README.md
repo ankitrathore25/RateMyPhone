@@ -58,7 +58,7 @@ Then i'll show the top 10 results having high cosine similarity values.
 
 Right now my search is little bit slow and i am working to optimize the computation of cosine similarity.
 
-# Challange Faced
+# Challenge Faced
 - Second challenge I faced is calculating cosine similarity of the query and documents. It takes huge time in calculating dot product of query vector with every document. I will be handling this problem with calculating dot product with top K documents with the query. These top K will be selected on the basis of idf value for the query terms.
 
 # Highlighting the search query
