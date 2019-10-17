@@ -66,6 +66,8 @@ Right now my search is little bit slow and i am working to optimize the computat
 
 # Synonyms and Phrase support:
 I have implemented synonyms support, for now this is available for only single word but this can be scaled to the multiple words query. Reason for keeping it to single word is because I am searching for every synonyms of the word so for example my search query is "best phones", we have more than 10 unique synonyms in nltk wordnet and 4 synonyms for the phone so for all the synonyms possible queries I need to process will be 10*4, which will take some quite time.
+Synonyms of 'best': {'estimable', 'beneficial', 'dependable', 'well', 'best', 'effective', 'dear', 'adept', 'full', 'outdo', 'Best', 'good', 'better'}
+Synonmyms of 'phone': {'phone', 'call', 'earphone', 'telephone'} 
 I know this is not the good approach but I'll keep it for future optimization.
 
 # More Challenges Faced
