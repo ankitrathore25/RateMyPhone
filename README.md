@@ -14,7 +14,7 @@ Search screen will be look like this.
 ![](https://github.com/ankitrathore25/RateMyPhone/blob/master/img/searchScreen.png)
 
 # Background Knowledge
-# >Search
+# Search
 I have implemented Tf-IDF(Term Frequency–Inverse Document Frequency) based ranking system for search engine. In information retrieval, TF-IDF of a term shows how important a word is in a pile of documents.
 Main Idea: For every key word from search query we find the whether that term exist in the document or not if it exist in document then what is its impact relative to the frequency of term in that document and in other document.
 
@@ -36,6 +36,7 @@ Another step in pruning data is to reduce the words to their stems word called S
 # Experiemental Result
 - I have tested different stemmer for their effect on the search result in my case. Below table explains it:
 ![](https://github.com/ankitrathore25/RateMyPhone/blob/master/img/stemmerComparison.png)
+
 We can see that how changing stemmer changes the search result so it is important to choose stemmer wisely.
 
 # Lemmatization
@@ -61,7 +62,7 @@ Right now my search is little bit slow and i am working to optimize the computat
 - Second challenge I faced is calculating cosine similarity of the query and documents. It takes huge time in calculating dot product of query vector with every document. I will be handling this problem with calculating dot product with top K documents with the query. These top K will be selected on the basis of idf value for the query terms.
 
 # Highlighting the search query
--I have done highlighting with simple css property. I added <span style="background:yellow;"></span> around the every term from search query to the the showed text documents. I have used Markup/markupsafe depedency to send HTML code to the flask.
+- I have done highlighting with simple css property. I added <span style="background:yellow;"></span> around the every term from search query to the the showed text documents. I have used Markup/markupsafe depedency to send HTML code to the flask.
 
 # Synonyms and Phrase support:
 I have implemented synonyms support, for now this is available for only single word but this can be scaled to the multiple words query. Reason for keeping it to single word is because I am searching for every synonyms of the word so for example my search query is "best phones", we have more than 10 unique synonyms in nltk wordnet and 4 synonyms for the phone so for all the synonyms possible queries I need to process will be 10*4, which will take some quite time.
