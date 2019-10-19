@@ -86,7 +86,7 @@ I know this is not the good approach but I'll keep it for future optimization.
 # Dataset
 - https://www.kaggle.com/ak47bluestack/amazonphonedataset
 
-# point to note
+# Points To Note
 - install all the dependencies of nltk before deploying on server
 
 # Technology
