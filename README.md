@@ -74,7 +74,7 @@ I know this is not the good approach but I'll keep it for future optimization.
 - Third challenge I faced was hosting my app to online freely available webserver (pythonanywhere or heroku). I know it is very easy to host online but I struggled with setting values in the global variables I defined. On these web hosting servers we do not run app using app.run() and flask is not thread safe so it creates different set of global variables and these global variables are inaccessible in the other functions. After restructuring the code and keeping all the code in a class which can be accessed using object solved this problem.
 
 # Demo
-- live version of webapp http://dm2.pythonanywhere.com/, http://dm3.pythonanywhere.com/
+- live version of webapp http://ankitrathore.pythonanywhere.com/
 
 # Reference
 - https://janav.wordpress.com/2013/10/27/tf-idf-and-cosine-similarity/
