@@ -29,18 +29,15 @@ if __name__=="__main__":
     array.add(dictionary.get("2"))
     print(array)
 
-    # # reader = csv.reader(open('amazonPhoneData.csv', 'rb'))
-    # # reader1 = csv.reader(open('output1.csv', 'rb'))
-    # writer = csv.writer(open('output1.csv', 'wb'))
-    with open('amazonPhoneDataset.csv') as csvfile:
-        readCSV = csv.reader(csvfile, delimiter=",")
-        writer = csv.writer(open('output1.csv', 'w'))
-        #[0:'Id', 1:'Product_name', 2:'by_info', 3:'Product_url', 4:'Product_img', 5:'Product_price', 6:'rating', 
-        # 7;'total_review', 8:'ans_ask', 9:'prod_des', 10:'feature', 11:'cust_review']
-        for row in readCSV:
-            fileData = row[1] + ' ' + row[9] + ' ' + row[10] #this will append multiple text column into one
-            if len(fileData.strip()) > 0:
-                writer.writerow(row)
+    # with open('amazonPhoneDataset.csv') as csvfile:
+    #     readCSV = csv.reader(csvfile, delimiter=",")
+    #     writer = csv.writer(open('output1.csv', 'w'))
+    #     #[0:'Id', 1:'Product_name', 2:'by_info', 3:'Product_url', 4:'Product_img', 5:'Product_price', 6:'rating', 
+    #     # 7;'total_review', 8:'ans_ask', 9:'prod_des', 10:'feature', 11:'cust_review']
+    #     for row in readCSV:
+    #         fileData = row[1] + ' ' + row[9] + ' ' + row[10] #this will append multiple text column into one
+    #         if len(fileData.strip()) > 0:
+    #             writer.writerow(row)
 
     # reader = csv.reader(open('amazonPhoneDataset.csv', 'rb', encoding='utf-8'))
     # # reader1 = csv.reader(open('output1.csv', 'rb'))
