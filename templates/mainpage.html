@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charsets="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>Data Mining Project Git</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <a class="navbar-brand" href="{{ url_for('index') }}">RateMyPhone</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('rendeSearchPage') }}">Search Engine<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('rendeClassifyPage') }}">Classifier </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('rendeImageCaptioningPage') }}">Image Captioning </a>
+            </li>
+            <li class="nav-item" style="float:right;">
+                <a class="nav-link" href="https://ankitrathore.netlify.com/">Blog</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        {% block body %}
+        <img src="/static/img/data-mining.png" alt="datamining" style="width:65%;height:70%;position:absolute;top:30%;right:5%;">
+        <div style="font-size: 50px;text-align:center;vertical-align:middle;position:absolute;top:70px;">Hi, I am Ankit Rathore</div>
+        <div style="font-size: 20px;width:30%;vertical-align:middle;position:absolute;top:130px;overflow-wrap: break-word;">Check out my work in Data Mining.</div>
+        <div style="position:absolute;top:170px;">
+            <a class="btn btn-outline-primary" href="/search" role="button">Search</a>
+            <a class="btn btn-outline-primary" href="/classify" role="button">Classify</a>
+            <a class="btn btn-outline-primary" href="/image" role="button">Image Caption</a>
+        </div>
+        {% endblock %}
+    </div>
+    
+</body>
+</html> 

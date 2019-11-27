@@ -1,0 +1,53 @@
+{% extends "mainpage.html" %}
+{% block body%}
+<div class="classifier">
+    <h1 style="text-align: center">Review Classifier</h1>
+    <nav style="text-align:center;width:500px;margin-left:auto;margin-right:auto" class="navbar navbar-light bg-light">
+        <form style="width:100%;" class="form-inline" name="passQuery" action="/classifyQuery" method="POST">
+            <input style="width:78%;margin-left:auto;margin-right:auto" class="form-control mr-sm-2" type="text" name="query" placeholder="Enter here" aria-label="Search">
+            <button style="width:18%;margin-left:auto;margin-right:auto" class="btn btn-outline-success my-2 my-sm-0" type="submit">Classify!!</button>
+        </form>
+    </nav>
+</div>
+
+{% if classifyResult %}
+<br>
+<div>
+    <h4 style="color:green;">Query : {{ q1 }}</h4>
+    <h4>Rating of the given text is classified as: {{ classifyResult.rating }}</h4>
+</div>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Rating Class</th>
+        <th scope="col">Probability</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Rating 1</th>
+            <td>{{ classifyResult.allClassProbability[0] }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Rating 2</th>
+            <td>{{ classifyResult.allClassProbability[1] }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Rating 3</th>
+            <td>{{ classifyResult.allClassProbability[2] }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Rating 4</th>
+            <td>{{ classifyResult.allClassProbability[3] }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Rating 5</th>
+            <td>{{ classifyResult.allClassProbability[4] }}</td>
+        </tr>
+    </tbody>
+  </table>
+  
+</div>
+<br>
+{% endif %}
+{% endblock%}
