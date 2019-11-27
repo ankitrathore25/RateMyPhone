@@ -11,10 +11,10 @@ Classifying the user review to one of the rating class. User will enter the revi
 - 3) Image Captioning : This phase is not related to the project but this option will let user to generate the captions for the uploaded images.
 - I have used different datasets for every phase. The reason for choosing different dataset is that I couldn't find a single dataset which have text column (which can be used for search) and images(used for image captioning) associated with the data.
 Home Screen will be look like.
-![](https://github.com/ankitrathore25/RateMyPhone/blob/master/img/AppHomePage.png)
+![](https://github.com/ankitrathore25/RateMyPhone/blob/master/static/img/AppHomePage.png)
 
 Search screen will be look like this.
-![](https://github.com/ankitrathore25/RateMyPhone/blob/master/img/searchScreen.png)
+![](https://github.com/ankitrathore25/RateMyPhone/blob/master/static/img/searchScreen.png)
 
 # Background Knowledge
 # Search
@@ -24,13 +24,13 @@ Main Idea: For every key word from search query we find the whether that term ex
 tf = (frequnecy of a word in the document) / (total no. of words in that document)
 idf = (total number of documents) / (number of documents in which term appears)
 We used normalization for calculating idf because value of total number of documents could be very large which will make the calculation a little bit tedious, so we use logarithm of the idf value.
-![](https://github.com/ankitrathore25/RateMyPhone/blob/master/img/tfidf.png)
+![](https://github.com/ankitrathore25/RateMyPhone/blob/master/static/img/tfidf.png)
 
 # Stopword Removal
 There are some words which are too common in english language like "the","is","a". These words are called stopwords which contain least meaning. An example from Wall Street Journal.
-![](https://github.com/ankitrathore25/RateMyPhone/blob/master/img/wordVsFrequencyTable.png)
+![](https://github.com/ankitrathore25/RateMyPhone/blob/master/static/img/wordVsFrequencyTable.png)
 Our first step is to remove these unneccessary words from the corpus so that our calculation becomes a little bit easier. Common stopwords in english are:
-![](https://github.com/ankitrathore25/RateMyPhone/blob/master/img/stopwordInEnglish.png)
+![](https://github.com/ankitrathore25/RateMyPhone/blob/master/static/img/stopwordInEnglish.png)
 We used python nltk stopword corpus for removing stopwords.
 
 # Stemming
@@ -38,7 +38,7 @@ Another step in pruning data is to reduce the words to their stems word called S
 
 # Experiemental Result
 - I have tested different stemmer for their effect on the search result in my case. Below table explains it:
-![](https://github.com/ankitrathore25/RateMyPhone/blob/master/img/stemmerComparison.png)
+![](https://github.com/ankitrathore25/RateMyPhone/blob/master/static/img/stemmerComparison.png)
 
 We can see that how changing stemmer changes the search result so it is important to choose stemmer wisely.
 
@@ -52,9 +52,9 @@ I have used nltk wordnet lemmatizer in my code. For processing data sequence of 
 We will then show the top records based on tf-idf values of the documents.
 
 # Cosine Similarity
-![](https://github.com/ankitrathore25/RateMyPhone/blob/master/img/cosine_sim.png)
+![](https://github.com/ankitrathore25/RateMyPhone/blob/master/static/img/cosine_sim.png)
 Formula to find cosine similarity:
-![](https://github.com/ankitrathore25/RateMyPhone/blob/master/img/similarity.png)
+![](https://github.com/ankitrathore25/RateMyPhone/blob/master/static/img/similarity.png)
 - After finding all the tf-idf values of search query for every document, i'll find the cosine similarity between the query and the documents.
 For this i'll find the dot product of search query vector and every document and save it in a list.
 Then i'll show the top 10 results having high cosine similarity values.
