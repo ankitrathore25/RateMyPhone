@@ -15,9 +15,11 @@ Classifying the user review to one of the rating class. User will enter the revi
 - pip install virtualenv
 - pip install markup
 
-
 # Demo
-- live version of webapp http://ankitrathore.pythonanywhere.com/
+- live version of webapp http://dm1.pythonanywhere.com/
+
+# Further Reading
+- checkout my blog for detailed info about my project. https://ankitrathore.netlify.com/project/internal-project/
 
 # Technology
 - Python
