@@ -17,6 +17,7 @@ Classifying the user review to one of the rating class. User will enter the revi
 
 # Demo
 - live version of webapp http://dm1.pythonanywhere.com/
+- Video demo https://www.youtube.com/watch?v=h5N_9-t-qMU
 
 # Further Reading
 - checkout my blog for detailed info about my project. https://ankitrathore.netlify.com/project/internal-project/
