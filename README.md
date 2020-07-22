@@ -5,7 +5,7 @@ Classifying the user review to one of the rating class. User will enter the revi
 - Download/clone the repository.
 - Follow the steps to create a virtual environment and install all the dependencies mentioned below.
 - Once all the dependencies are downloaded, go to the flask_app.py file and run the python server in the console with command Python -i or if using ide run the file.
-- go to the url 127.0.0.1 to access the webpage
+- go to the url 127.0.0.1 to access the webpage.
 
 # Dependencies to install
 - pip install flask
