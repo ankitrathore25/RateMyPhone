@@ -1,6 +1,9 @@
 # RateMyPhone
 Classifying the user review to one of the rating class. User will enter the reviews as the plain text in the input box and end result will be the rating based on the classifying model used.
-### [Demo](http://dm1.pythonanywhere.com/)
+
+# Demo
+- [Live Here!](http://dm1.pythonanywhere.com/)
+- [Video demo](https://www.youtube.com/watch?v=h5N_9-t-qMU)
 
 # Setup
 - Download/clone the repository.
@@ -15,10 +18,6 @@ Classifying the user review to one of the rating class. User will enter the revi
 - pip install nltk
 - pip install virtualenv
 - pip install markup
-
-# Demo
-- live version of webapp http://dm1.pythonanywhere.com/
-- Video demo https://www.youtube.com/watch?v=h5N_9-t-qMU
 
 # Further Reading
 - checkout my blog for detailed info about my project. https://ankitrathore.netlify.com/project/internal-project/
