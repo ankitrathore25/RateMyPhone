@@ -3,7 +3,7 @@ Classifying the user review to one of the rating class. User will enter the revi
 
 # Demo
 - [Live Here!](http://dm1.pythonanywhere.com/)
-- [Video demo](https://www.youtube.com/watch?v=h5N_9-t-qMU)
+- [Video demo](https://www.youtube.com/watch?v=00xtU5qQH14)
 
 # Setup
 - Download/clone the repository.
